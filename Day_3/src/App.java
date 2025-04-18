@@ -3,6 +3,11 @@ import com.humanbooster.exercices.Voiture;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        //ex1();
+        ex2();
+    }
+
+    public static void ex1() throws Exception{
         Voiture clio = new Voiture("Renault", "Clio", 170, 3, 4, 0);
         Moto trucQuiFaitDuBruit = new Moto("Ducati", "Vroum Vroum", 280, 1, 2);
 
@@ -11,5 +16,9 @@ public class App {
             clio.accelerer();
         while (clio.getActualSpeed() > 0)
             clio.freiner();
+    }
+
+    public static void ex2() throws Exception{
+
     }
 }
