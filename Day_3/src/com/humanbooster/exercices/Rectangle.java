@@ -50,4 +50,32 @@ public class Rectangle implements Calculable, Dessinable{
         if (Double.isInfinite(perimeter)) throw new Exception("Error: Double overflow");
         return perimeter;
     }
+
+    @Override
+    public void dessiner(){
+        int i = 0;
+        int max = (int) Math.ceil(Math.max(this.c1, this.c2));
+        while (i < (int) (this.c1 * this.c2)) {
+            if (i % max == 0) System.out.print("\n");
+            else System.out.print(" * ");
+            i++;
+        }
+    }
+
+    @Override
+    public String obtenirDescription() throws Exception{
+        double longueur;
+        double largeur;
+
+        if (this.c1 > this.c2) {
+            longueur = this.c1;
+            largeur = this.c2;    
+        }
+        else{
+            longueur = this.c2;
+            largeur = this.c1;
+        }
+        return ("Rectangle:\nLongueur: " + longueur + "\nLargeur: " + largeur +
+        "\nPerimetre: " + this.calculerPerimetre() + "\nAire: " + this.calculerAire());
+    }
 }

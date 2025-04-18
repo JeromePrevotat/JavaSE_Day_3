@@ -1,5 +1,4 @@
 package com.humanbooster.exercices;
-import java.lang.Math;
 
 public class Cercle implements Calculable, Dessinable{
     // - Implémenter les méthodes de calcul géométrique
@@ -39,5 +38,13 @@ public class Cercle implements Calculable, Dessinable{
         double perimeter = 2 * this.rayon * Math.PI;
         if (Double.isInfinite(perimeter)) throw new Exception("Error: Double overflow");
         return perimeter;
+    }
+
+    @Override
+    public void dessiner(){}
+
+    @Override
+    public String obtenirDescription(){
+        return ("Cercle:\nRayon: " + this.rayon);
     }
 }

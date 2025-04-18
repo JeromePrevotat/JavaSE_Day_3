@@ -61,4 +61,14 @@ public class Triangle implements Calculable, Dessinable{
         if (Double.isInfinite(perimeter)) throw new Exception("Error: Double overflow");
         return perimeter;
     }
+
+    @Override
+    public void dessiner(){
+
+    }
+    
+    @Override
+    public String obtenirDescription(){
+        return ("Triangle:\nCote 1: " + this.c1 + "\nCote 2: " + this.c2 + "\nCote 3: " + this.c3);
+    }
 }
