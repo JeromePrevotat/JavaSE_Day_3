@@ -41,7 +41,9 @@ public class Cercle implements Calculable, Dessinable{
     }
 
     @Override
-    public void dessiner(){}
+    public void dessiner(){
+        // Bresenham FdF ?
+    }
 
     @Override
     public String obtenirDescription(){

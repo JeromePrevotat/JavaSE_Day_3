@@ -1,10 +1,6 @@
 package com.humanbooster.exercices;
 
-public class Rectangle implements Calculable, Dessinable{
-    // - Implémenter les méthodes de calcul géométrique
-    // - Implémenter les méthodes de dessin (représentation ASCII dans la console)
-    // - Gérer la validation des données
-    
+public class Rectangle implements Calculable, Dessinable{    
     private double c1;
     private double c2;
 

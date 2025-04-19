@@ -3,7 +3,6 @@ package com.humanbooster.exercices;
 public class Triangle implements Calculable, Dessinable{
     // - Implémenter les méthodes de calcul géométrique
     // - Implémenter les méthodes de dessin (représentation ASCII dans la console)
-    // - Gérer la validation des données
     private double c1;
     private double c2;
     private double c3;
@@ -64,11 +63,12 @@ public class Triangle implements Calculable, Dessinable{
 
     @Override
     public void dessiner(){
-
+        System.out.println("Not possible in ASCII representation");
     }
     
     @Override
-    public String obtenirDescription(){
-        return ("Triangle:\nCote 1: " + this.c1 + "\nCote 2: " + this.c2 + "\nCote 3: " + this.c3);
+    public String obtenirDescription() throws Exception{
+        return ("Triangle:\nCote 1: " + this.c1 + "\nCote 2: " + this.c2 + "\nCote 3: " + this.c3 +
+        "\nPerimetre: " + this.calculerPerimetre() + "\nAire: " + this.calculerAire());
     }
 }
