@@ -1,6 +1,7 @@
 import com.humanbooster.exercices.Moto;
-import com.humanbooster.exercices.Rectangle;
 import com.humanbooster.exercices.Voiture;
+import com.humanbooster.exercices.GestionnaireFormes;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -20,19 +21,7 @@ public class App {
     }
 
     public static void ex2() throws Exception{
-        Rectangle r1 = new Rectangle(10, 10);
-        Rectangle r2 = new Rectangle(20, 10);
-        Rectangle r3 = new Rectangle(10, 20);
-        System.out.println("\n");
-        r1.dessiner();
-        System.out.println("\n\n" + r1.obtenirDescription());
-        
-        System.out.println("\n");
-        r2.dessiner();
-        System.out.println("\n\n" + r2.obtenirDescription());
-        
-        System.out.println("\n");
-        r2.dessiner();
-        System.out.println("\n\n" + r2.obtenirDescription());
+        // GestionnaireFormes.testRectangle();
+        GestionnaireFormes.testTriangle();
     }
 }
