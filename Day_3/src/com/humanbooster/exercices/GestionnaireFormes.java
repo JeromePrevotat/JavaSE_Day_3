@@ -28,6 +28,7 @@ public class GestionnaireFormes {
         Triangle t3 = new Triangle(15, 10, 10);
         Triangle t4 = new Triangle(10, 10, 10);
         Triangle t5 = new Triangle(3, 4, 5);
+        Triangle t6 = new Triangle(5, 5, 5 * Math.sqrt(2));
         
         System.out.println("\n");
         // t1.dessiner();
@@ -37,6 +38,8 @@ public class GestionnaireFormes {
         System.out.println("\n\n" + t2.obtenirDescription());
         System.out.println("\n\n" + t3.obtenirDescription());
         System.out.println("\n\n" + t4.obtenirDescription());
+        System.out.println("\n\n" + t5.obtenirDescription());
+        System.out.println("\n\n" + t6.obtenirDescription());
 
     }
 }
