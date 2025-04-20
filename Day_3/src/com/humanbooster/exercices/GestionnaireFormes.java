@@ -23,23 +23,33 @@ public class GestionnaireFormes {
     }
 
     public static void testTriangle() throws Exception{
+        // ISO
         Triangle t1 = new Triangle(10, 10, 15);
         Triangle t2 = new Triangle(10, 15, 10);
         Triangle t3 = new Triangle(15, 10, 10);
+
+        // EQUI
         Triangle t4 = new Triangle(10, 10, 10);
+
+        // RECT
         Triangle t5 = new Triangle(3, 4, 5);
         Triangle t6 = new Triangle(5, 5, 5 * Math.sqrt(2));
+
+        // ABERRANT
+        Triangle t7 = new Triangle(1,1,1);
         
         System.out.println("\n");
         // t1.dessiner();
         // System.out.println("\n\n" + t1.obtenirDescription());
 
-        System.out.println("\n\n" + t1.obtenirDescription());
-        System.out.println("\n\n" + t2.obtenirDescription());
-        System.out.println("\n\n" + t3.obtenirDescription());
-        System.out.println("\n\n" + t4.obtenirDescription());
-        System.out.println("\n\n" + t5.obtenirDescription());
-        System.out.println("\n\n" + t6.obtenirDescription());
+        // System.out.println("\n\n" + t1.obtenirDescription());
+        // System.out.println("\n\n" + t2.obtenirDescription());
+        // System.out.println("\n\n" + t3.obtenirDescription());
+        // System.out.println("\n\n" + t4.obtenirDescription());
+        // System.out.println("\n\n" + t5.obtenirDescription());
+        // System.out.println("\n\n" + t6.obtenirDescription());
+        System.out.println("\n\n" + t7.obtenirDescription());
+        t7.dessiner();
 
     }
 }
