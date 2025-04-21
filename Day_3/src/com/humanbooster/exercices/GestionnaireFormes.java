@@ -24,6 +24,7 @@ public class GestionnaireFormes {
 
     public static void testTriangle() throws Exception{
         // ISO
+        Triangle t0 = new Triangle(8, 8, 15);
         Triangle t1 = new Triangle(10, 10, 15);
         Triangle t2 = new Triangle(10, 15, 10);
         Triangle t3 = new Triangle(15, 10, 10);
@@ -48,8 +49,8 @@ public class GestionnaireFormes {
         // System.out.println("\n\n" + t4.obtenirDescription());
         // System.out.println("\n\n" + t5.obtenirDescription());
         // System.out.println("\n\n" + t6.obtenirDescription());
-        System.out.println("\n\n" + t7.obtenirDescription());
-        t7.dessiner();
+        // System.out.println("\n\n" + t1.obtenirDescription());
+        t0.dessiner();
 
     }
 }

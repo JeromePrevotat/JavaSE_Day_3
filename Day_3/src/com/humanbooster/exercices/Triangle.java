@@ -100,8 +100,9 @@ public class Triangle implements Calculable, Dessinable {
     @Override
     public void dessiner() {
         // System.out.println("Not possible in ASCII representation");
-        System.out.println("C: " + c1);
         if (this.type.equals("Equilateral")) this.dessinerEquilateral();
+        if (this.type.equals("Isocele")) this.dessinerIsocele();
+        
     }
 
     public void dessinerEquilateral(){
@@ -114,6 +115,52 @@ public class Triangle implements Calculable, Dessinable {
                 h++;
             }
             else if ((i % this.c1) > (this.c1 - h)) System.out.print("   ");
+            else System.out.print(" * ");
+            i++;
+        }
+        System.out.println("\n");
+    }
+
+    public void dessinerIsocele(){
+        int i = 0;
+        double b = 0;
+        double h = 0;
+        int line = 0;
+        // Set BASE and Hight
+        if (this.c1 != this.c2 && this.c1 != this.c3){
+            //c2 = c3
+            b = this.c1;
+            h = this.c2;
+        }
+        if (this.c2 != this.c1 && this.c2 != this.c3){
+            //c1 = c3
+            b = this.c2;
+            h = this.c1;
+        }
+        if (this.c3 != this.c1 && this.c3 != this.c2){
+            //c1 = c2
+            b = this.c3;
+            h = this.c1;
+        }
+        // Set the Hight to be the lower number
+        if (h > b){
+            h = h + b;
+            b = h - b;
+            h = h - b;
+        }
+        b++; // EOL
+        // "Basic" Quick Maths
+        if (((b) / 2) != h){
+            System.out.println("It is impossible to represent a Regular Isosceles Triangle in ASCII that does not satisfy the condition H = (B + 1) / 2.\n");
+            return;
+        }
+        // DRAWING
+        while (i < b * h){
+            if (i % b == 0){
+                System.out.print("\n");
+                line++;
+            }
+            else if ((i % b) < line || (i % b) > (b - line)) System.out.print("   ");
             else System.out.print(" * ");
             i++;
         }
