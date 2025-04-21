@@ -102,7 +102,8 @@ public class Triangle implements Calculable, Dessinable {
         // System.out.println("Not possible in ASCII representation");
         if (this.type.equals("Equilateral")) this.dessinerEquilateral();
         if (this.type.equals("Isocele")) this.dessinerIsocele();
-        
+        if (this.type.equals("Rectangle")) this.dessinerRectangle();
+        if (this.type.equals("Rectangle Isocele")) this.dessinerIsocele();
     }
 
     public void dessinerEquilateral(){
@@ -150,7 +151,8 @@ public class Triangle implements Calculable, Dessinable {
         }
         b++; // EOL
         // "Basic" Quick Maths
-        if (((b) / 2) != h){
+        if ((((int) b) / 2) != h){
+            System.out.println("B: " + b + "\nH: " + h);
             System.out.println("It is impossible to represent a Regular Isosceles Triangle in ASCII that does not satisfy the condition H = (B + 1) / 2.\n");
             return;
         }
@@ -164,6 +166,44 @@ public class Triangle implements Calculable, Dessinable {
             else System.out.print(" * ");
             i++;
         }
+    }
+
+    public void dessinerRectangle(){
+        int i = 0;
+        int hypo;
+        int hight;
+        double a = 0;
+        double b = 0;
+        int line = 0;
+        hypo = (int) Math.max(this.c1, Math.max(this.c2, this.c3));
+        if (hypo == this.c1){
+            a = this.c2;
+            b = this.c3;
+        }
+        if (hypo == this.c2){
+            a = this.c1;
+            b = this.c3;
+        }
+        if (hypo == this.c3){
+            a = this.c1;
+            b = this.c2;
+        }
+        hight = hypo / 2;
+        // "Basic" Quick Maths
+        if (((a) / 2) != hight || (b/2) != hight){
+            System.out.println("It is impossible to represent a Triangle in ASCII that does not satisfy the condition H = (B + 1) / 2.\n");
+            return;
+        }
+        while (i < (a * b)){
+            if (i % a == 0 && i != 0){
+                System.out.print("\n");
+                line++;
+            }
+            else if ((i % a) > (a - line)) System.out.print("   ");
+            else System.out.print(" * ");
+            i++;
+        }
+        System.out.println("\n");
     }
 
     public double cosLaw(double a, double b, double c) {

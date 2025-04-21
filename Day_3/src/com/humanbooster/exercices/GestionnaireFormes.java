@@ -47,10 +47,10 @@ public class GestionnaireFormes {
         // System.out.println("\n\n" + t2.obtenirDescription());
         // System.out.println("\n\n" + t3.obtenirDescription());
         // System.out.println("\n\n" + t4.obtenirDescription());
-        // System.out.println("\n\n" + t5.obtenirDescription());
+        System.out.println("\n\n" + t6.obtenirDescription());
         // System.out.println("\n\n" + t6.obtenirDescription());
         // System.out.println("\n\n" + t1.obtenirDescription());
-        t0.dessiner();
+        t6.dessiner();
 
     }
 }
