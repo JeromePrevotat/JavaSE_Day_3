@@ -1,6 +1,6 @@
+import com.humanbooster.exercices.GestionnaireFormes;
 import com.humanbooster.exercices.Moto;
 import com.humanbooster.exercices.Voiture;
-import com.humanbooster.exercices.GestionnaireFormes;
 
 
 public class App {
@@ -21,7 +21,10 @@ public class App {
     }
 
     public static void ex2() throws Exception{
-        // GestionnaireFormes.testRectangle();
-        GestionnaireFormes.testTriangle();
+        GestionnaireFormes formes = new GestionnaireFormes();
+        formes.testRectangle();
+        formes.testTriangle();
+        //GestionnaireFormes.testTriangle();
+        // GestionnaireFormes.testCercle();
     }
 }

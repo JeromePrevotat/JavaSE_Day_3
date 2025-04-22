@@ -7,7 +7,7 @@ public class Triangle implements Calculable, Dessinable {
     private double c2;
     private double c3;
     private final int precision = (int) Math.pow(10, 5);
-    private double[] angles = new double[3];
+    private final double[] angles = new double[3];
     private String type;
 
     public Triangle(double c1, double c2, double c3) throws Exception {
@@ -20,8 +20,8 @@ public class Triangle implements Calculable, Dessinable {
         this.c1 = c1;
         this.c2 = c2;
         this.c3 = c3;
-        this.setAngles();
-        this.setType();
+        initAngles();
+        initType();
     }
 
     // GETTER
@@ -64,13 +64,13 @@ public class Triangle implements Calculable, Dessinable {
         this.c3 = c3;
     }
 
-    public void setAngles() {
+    private void initAngles() {
         this.angles[0] = (Math.round(this.cosLaw(this.c2, this.c3, this.c1) * this.precision)) / this.precision;
         this.angles[1] = (Math.round(this.cosLaw(this.c1, this.c3, this.c2) * this.precision)) / this.precision;
         this.angles[2] = (Math.round(this.cosLaw(this.c1, this.c2, this.c3) * this.precision)) / this.precision;
     }
     
-    public void setType(){
+    private void initType(){
         if (!(this.isRectangle()) && !(this.isIsocele()) && !(this.isEquilateral())) this.type = "Quelconque";
         else this.type = "";
         if (this.isRectangle()) this.type += " Rectangle";

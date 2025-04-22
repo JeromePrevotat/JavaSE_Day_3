@@ -44,6 +44,22 @@ public class Cercle implements Calculable, Dessinable{
     public void dessiner(){
         // Bresenham FdF ?
     }
+    
+//     @Override
+//     public void dessiner() {
+//         int diametre = (int)this.rayon * 2;
+//         for (int i = 0; i < diametre; i++) {
+//             for (int j = 0; j < diametre; j++) {
+//              double distance = Math.sqrt(Math.pow(i - this.rayon, 2) + Math.pow(j - this.rayon, 2));
+//              if (distance <= this.rayon) {
+//                   System.out.print("* ");
+//              } else {
+//                 System.out.print("  ");
+//              }
+//         }
+//         System.out.println();
+//     }
+//    }
 
     @Override
     public String obtenirDescription(){

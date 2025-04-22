@@ -1,25 +1,49 @@
 package com.humanbooster.exercices;
 
-public class GestionnaireFormes {
+import java.util.ArrayList;
+
+public class GestionnaireFormes{
     // - Manipuler une liste de formes en tant que `Calculable`
     // - Manipuler une liste de formes en tant que `Dessinable`
     // - Démontrer l'utilisation séparée des deux aspects
+
+    private static ArrayList<Dessinable> formeDessinable;
+    private static ArrayList<Calculable> formeCalculable;
+
+    public GestionnaireFormes(){
+        formeDessinable = new ArrayList<>();
+        formeCalculable = new ArrayList<>();
+    }
+
+    // GETTER
+    public ArrayList<Dessinable> getFormeDessinable(){
+        return formeDessinable;
+    }
+    
+    public ArrayList<Calculable> getFormeCalculable(){
+        return formeCalculable;
+    }
 
     public static void testRectangle() throws Exception{
         Rectangle r1 = new Rectangle(10, 10);
         Rectangle r2 = new Rectangle(20, 10);
         Rectangle r3 = new Rectangle(10, 20);
-        System.out.println("\n");
-        r1.dessiner();
-        System.out.println("\n\n" + r1.obtenirDescription());
-        
-        System.out.println("\n");
-        r2.dessiner();
-        System.out.println("\n\n" + r2.obtenirDescription());
-        
-        System.out.println("\n");
-        r3.dessiner();
-        System.out.println("\n\n" + r3.obtenirDescription());
+
+        formeDessinable.add(r1);
+        formeDessinable.add(r2);
+        formeDessinable.add(r3);
+
+        formeCalculable.add(r1);
+        formeCalculable.add(r2);
+        formeCalculable.add(r3);
+
+        for(Dessinable f : formeDessinable){
+            if (f instanceof Rectangle){
+                System.out.println(f.obtenirDescription());
+                f.dessiner();
+                System.out.println("\n");
+            }
+        }
     }
 
     public static void testTriangle() throws Exception{
@@ -39,18 +63,26 @@ public class GestionnaireFormes {
         // ABERRANT
         Triangle t7 = new Triangle(1,1,1);
         
-        System.out.println("\n");
-        // t1.dessiner();
-        // System.out.println("\n\n" + t1.obtenirDescription());
+        formeDessinable.add(t0);        
+        formeDessinable.add(t1);        
+        formeDessinable.add(t2);        
+        formeDessinable.add(t3);        
+        formeDessinable.add(t4);        
+        formeDessinable.add(t5);        
+        formeDessinable.add(t6);        
+        formeDessinable.add(t7);        
 
-        // System.out.println("\n\n" + t1.obtenirDescription());
-        // System.out.println("\n\n" + t2.obtenirDescription());
-        // System.out.println("\n\n" + t3.obtenirDescription());
-        // System.out.println("\n\n" + t4.obtenirDescription());
-        System.out.println("\n\n" + t6.obtenirDescription());
-        // System.out.println("\n\n" + t6.obtenirDescription());
-        // System.out.println("\n\n" + t1.obtenirDescription());
-        t6.dessiner();
+        for(Dessinable f : formeDessinable){
+            if (f instanceof Triangle){
+                System.out.println(f.obtenirDescription());
+                f.dessiner();
+                System.out.println("\n");
+            }
+        }
+    }
 
+    public static void testCercle() throws Exception{
+        Cercle c1 = new Cercle(5);
+        c1.dessiner();
     }
 }
