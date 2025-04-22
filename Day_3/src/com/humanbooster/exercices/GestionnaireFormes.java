@@ -24,6 +24,7 @@ public class GestionnaireFormes{
         return this.formeCalculable;
     }
 
+    // TESTS
     public void testRectangle() throws Exception{
         Rectangle r1 = new Rectangle(10, 10);
         Rectangle r2 = new Rectangle(20, 10);
@@ -38,11 +39,9 @@ public class GestionnaireFormes{
         this.formeCalculable.add(r3);
 
         for(Dessinable f : formeDessinable){
-            if (f instanceof Rectangle){
-                System.out.println(f.obtenirDescription());
-                f.dessiner();
-                System.out.println("\n");
-            }
+            System.out.println(f.obtenirDescription());
+            f.dessiner();
+            System.out.println("\n");
         }
     }
 
@@ -73,11 +72,9 @@ public class GestionnaireFormes{
         this.formeDessinable.add(t7);        
 
         for(Dessinable f : this.formeDessinable){
-            if (f instanceof Triangle){
-                System.out.println(f.obtenirDescription());
-                f.dessiner();
-                System.out.println("\n");
-            }
+            System.out.println(f.obtenirDescription());
+            f.dessiner();
+            System.out.println("\n");
         }
     }
 
