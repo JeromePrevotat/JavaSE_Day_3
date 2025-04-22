@@ -24,7 +24,8 @@ public class App {
         GestionnaireFormes formes = new GestionnaireFormes();
         formes.testRectangle();
         formes.testTriangle();
+        System.out.println("Collection Size : " + formes.getFormeDessinable().size());
         //GestionnaireFormes.testTriangle();
-        // GestionnaireFormes.testCercle();
+        //GestionnaireFormes.testCercle();
     }
 }
